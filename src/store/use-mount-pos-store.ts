@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useMountPosStore = defineStore('password', () => {
+export const useMountPosStore = defineStore('mount-pos', () => {
   // State
   const state = ref('')
 
