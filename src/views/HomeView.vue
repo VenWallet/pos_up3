@@ -48,8 +48,6 @@ async function handleSubmit() {
       },
     )
 
-    console.log(data)
-
     localStorage.setItem('userId', data.data.userLinked)
     localStorage.setItem('description', data.data.description)
     localStorage.setItem('title', data.data.title)
@@ -93,17 +91,16 @@ function openCamera() {
 
       <div class="relative mt-[45px] flex justify-center items-center">
         <img src="../assets/img/border-rounded-pounts.png" alt="" />
-        <!-- Lector de QR -->
         <img src="../assets/img/qr.png" class="absolute" alt="" @click="openCamera" />
       </div>
 
       <div
-        class="border border-black mt-[20px] mx-[26px] py-[10px] px-[14px] rounded-[13px] flex items-center"
+        class="border-[1px] border-black mt-[20px] mx-[26px] py-[10px] px-[14px] rounded-[13px] flex items-center"
       >
         <input
           type="text"
           placeholder="Pegar código de punto de venta"
-          class="text-[12px] w-full"
+          class="text-[12px] w-full focus:outline-none"
           ref="pasteInput"
           v-model="codeUP3"
         />
